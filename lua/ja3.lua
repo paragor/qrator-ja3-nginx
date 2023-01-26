@@ -60,10 +60,10 @@ function ja3_concat_decimals(decimals_array)
     return result_str
 end
 
-function ja3_curator2sailforce(curator_str)
+function ja3_qrator2sailforce(qrator_str)
     local parts, result_str, ciphers
 
-    parts = split(",", curator_str)
+    parts = split(",", qrator_str)
     if #parts ~= 5 then
         error("ja3 should have 5 parts")
     end
@@ -86,4 +86,4 @@ function ja3_curator2sailforce(curator_str)
 end
 
 --_str = "0304,6a6a:1301:1302:1303:c02c:c02b:cca9:c030:c02f:cca8:c00a:c009:c014:c013,0000:0017:ff01:000a:000b:0010:0005:000d:0012:0033:002d:002b:001b:0015,dada:001d:0017:0018:0019,"
---print(ja3_curator2sailforce(_str))
+--print(ja3_qrator2sailforce(_str))

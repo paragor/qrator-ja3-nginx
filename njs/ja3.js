@@ -33,8 +33,8 @@ function transform_segment(segment) {
     return dec_chunks.join("-")
 }
 
-function ja3_curator2sailforce(curator_str) {
-    let segments = curator_str.split(",")
+function ja3_qrator2sailforce(qrator_str) {
+    let segments = qrator_str.split(",")
     if (segments.length !== 5) {
         throw new Error("ja3 should have 5 segments")
     }
@@ -55,7 +55,7 @@ function ja3_njs(r, is_digest) {
     if (!header) {
         return ""
     }
-    let ja3_long = ja3_curator2sailforce(header)
+    let ja3_long = ja3_qrator2sailforce(header)
     if (!is_digest) {
         return ja3_long
     }
@@ -70,7 +70,7 @@ function ja3_njs_str(r) {
     return ja3_njs(r, false)
 }
 
-export default {ja3_curator2sailforce, ja3_njs_digest, ja3_njs_str}
+export default {ja3_qrator2sailforce, ja3_njs_digest, ja3_njs_str}
 
 // let _str = "0304,6a6a:1301:1302:1303:c02c:c02b:cca9:c030:c02f:cca8:c00a:c009:c014:c013,0000:0017:ff01:000a:000b:0010:0005:000d:0012:0033:002d:002b:001b:0015,dada:001d:0017:0018:0019,"
-// console.log(ja3_curator2sailforce(_str))
+// console.log(ja3_qrator2sailforce(_str))
